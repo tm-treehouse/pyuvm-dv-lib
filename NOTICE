@@ -1,0 +1,21 @@
+pyuvm-dv-lib
+Copyright the pyuvm-dv-lib contributors.
+
+This product is a derivative work. Its structure, class names, and
+behavioural contracts are ported from the OpenTitan project's dv_lib
+SystemVerilog UVM base library:
+
+    OpenTitan
+    Copyright lowRISC contributors.
+    Licensed under the Apache License, Version 2.0.
+    https://github.com/lowRISC/opentitan
+    Source: hw/dv/sv/dv_lib
+
+The original SystemVerilog is © lowRISC contributors and is used here
+under the terms of the Apache License, Version 2.0. This Python port is
+an independent reimplementation for the pyuvm / cocotb ecosystem and is
+not affiliated with or endorsed by lowRISC or the OpenTitan project.
+
+This software depends on, but does not include, the following projects:
+  - pyuvm  (https://github.com/pyuvm/pyuvm)
+  - cocotb (https://github.com/cocotb/cocotb)

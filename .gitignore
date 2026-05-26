@@ -1,0 +1,38 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# cocotb / simulation artifacts
+sim_build/
+results.xml
+*.vcd
+*.fst
+*.ghw
+dump.vcd
+waves/
+
+# Editors / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store

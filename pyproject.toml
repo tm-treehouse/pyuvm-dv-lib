@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyuvm-dv-lib"
+version = "0.1.0"
+description = "A pyuvm port of the OpenTitan dv_lib SystemVerilog UVM base library"
+readme = "README.md"
+requires-python = "==3.13.0"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "pyuvm-dv-lib contributors" },
+]
+keywords = [
+    "uvm", "pyuvm", "cocotb", "verification", "opentitan",
+    "dv", "hardware", "rtl", "testbench",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+]
+dependencies = [
+    "pyuvm>=2.9",
+    "cocotb>=1.8",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "pytest-cov>=4",
+]
+
+[project.urls]
+Homepage = "https://github.com/tm-treehouse/pyuvm-dv-lib"
+Repository = "https://github.com/tm-treehouse/pyuvm-dv-lib"
+Issues = "https://github.com/tm-treehouse/pyuvm-dv-lib/issues"
+"OpenTitan dv_lib (origin)" = "https://github.com/lowRISC/opentitan/tree/master/hw/dv/sv/dv_lib"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["dv_lib*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+addopts = "-ra"
+
+[tool.coverage.run]
+branch = true
+source = ["dv_lib"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
